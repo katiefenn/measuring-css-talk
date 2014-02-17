@@ -1,0 +1,79 @@
+/**
+ * Default theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+// This file has been copied over from
+// ../../bower_components/reveal.js/css/theme/source/default.scss
+
+// Default mixins and settings -----------------
+@import "../../bower_components/reveal.js/css/theme/template/mixins";
+@import "../../bower_components/reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts ----------------
+@font-face {
+        font-family: 'Quicksand';
+        src: url('../fonts/Quicksand-Regular.otf');
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+        font-family: 'Ubuntu Mono';
+        src: url('../fonts/UbuntuMono-R.ttf');
+        font-weight: normal;
+        font-style: normal;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+// ---------------------------------------------
+
+// Override theme settings ---------------------
+$heading1TextShadow: 0px 5px 6px rgba(150, 150, 150, 1);
+// Other options include e.g.
+$mainFont: 'Quicksand', sans-serif;
+$mainColor: #555;
+$headingColor: #555;
+$linkColor: #8000FF;
+$linkColorHover: $linkColor;
+$headingFont: 'Quicksand', Impact, sans-serif;
+// $headingTextShadow: none;
+// $headingLetterSpacing: -0.03em;
+// $headingTextTransform: none;
+// $selectionBackgroundColor: #e0ad52;
+// $mainFontSize: 30px;
+$backgroundColor: #FFF;
+// See ../../bower_components/reveal.js/css/theme/template/settings.scss for the full list.
+// ---------------------------------------------
+
+// Background generator ------------------------
+@mixin bodyBackground() {
+        background-color: #FFF;
+}
+// ---------------------------------------------
+
+// Theme template ------------------------------
+@import "../../bower_components/reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+// See ../../bower_components/reveal.js/css/theme/README.md
+// for further explanations on how reveal.js themes work.
+
+.reveal .controls * {
+	display: none;
+}
+
+.reveal .colour-hashes {
+	list-style: none;
+	display: block;
+	overflow-y: scroll;
+	height: 500px;
+	font-family: 'Ubuntu Mono', monospace;
+
+	li {
+		display: inline;
+		font-size: 70%;
+		font-weight: bold;
+	}
+}
