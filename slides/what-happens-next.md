@@ -5,4 +5,3 @@
 - Sass support, Jenkins & Grunt
 - Quantified feedback
 - Issues in the issue tracker
-- Documentation and unit tests
