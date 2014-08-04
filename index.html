@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Measuring CSS</title>
+        <title>Measuring CSS With Parker</title>
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.min.css">
     
         <link rel="stylesheet" href="css/theme.css" id="theme">
+        <link rel="stylesheet" href="css/local.css">
     
 
         <!-- For syntax highlighting -->
@@ -21,7 +22,13 @@
 
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
-          document.write( '<link rel="stylesheet" href="bower_components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+          if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'bower_components/reveal.js/css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
         </script>
 
         <!--[if lt IE 9]>
@@ -38,7 +45,15 @@
                 
                     
                         
-    <section data-markdown="slides/index.md"></section>
+    <section data-markdown="slides/measuring-css-with-parker.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/katie-fenn.md"></section>
 
 
                     
@@ -54,7 +69,7 @@
                 
                     
                         
-    <section data-markdown="slides/this-is-bad-design.md"></section>
+    <section data-markdown="slides/the-solution.md"></section>
 
 
                     
@@ -62,7 +77,7 @@
                 
                     
                         
-    <section data-markdown="slides/stylesheets-have-complexity.md"></section>
+    <section data-markdown="slides/what-are-we-up-against.md"></section>
 
 
                     
@@ -70,7 +85,7 @@
                 
                     
                         
-    <section data-html="slides/example-1.html"></section>
+    <section data-markdown="slides/what-is-parker.md"></section>
 
 
                     
@@ -78,7 +93,7 @@
                 
                     
                         
-    <section data-markdown="slides/example-2.md"></section>
+    <section data-markdown="slides/how-can-you-use-parker.md"></section>
 
 
                     
@@ -86,7 +101,7 @@
                 
                     
                         
-    <section data-markdown="slides/example-3.md"></section>
+    <section data-markdown="slides/how-can-you-use-parker-2.md"></section>
 
 
                     
@@ -94,7 +109,7 @@
                 
                     
                         
-    <section data-markdown="slides/better-design-means.md"></section>
+    <section data-markdown="slides/how-can-you-use-parker-3.md"></section>
 
 
                     
@@ -102,7 +117,7 @@
                 
                     
                         
-    <section data-markdown="slides/changing-design.md"></section>
+    <section data-markdown="slides/how-can-parker-help.md"></section>
 
 
                     
@@ -110,7 +125,7 @@
                 
                     
                         
-    <section data-markdown="slides/introducing-parker.md"></section>
+    <section data-markdown="slides/what-have-i-done-with-parker.md"></section>
 
 
                     
@@ -118,7 +133,7 @@
                 
                     
                         
-    <section data-markdown="slides/parker-demonstration.md"></section>
+    <section data-markdown="slides/the-good.md"></section>
 
 
                     
@@ -126,7 +141,7 @@
                 
                     
                         
-    <section data-markdown="slides/what-have-i-learned.md"></section>
+    <section data-markdown="slides/the-good-2.md"></section>
 
 
                     
@@ -134,7 +149,7 @@
                 
                     
                         
-    <section data-markdown="slides/oss-is-great.md"></section>
+    <section data-markdown="slides/the-bad.md"></section>
 
 
                     
@@ -142,7 +157,7 @@
                 
                     
                         
-    <section data-markdown="slides/nodejs.md"></section>
+    <section data-markdown="slides/the-bad-2.md"></section>
 
 
                     
@@ -150,7 +165,7 @@
                 
                     
                         
-    <section data-markdown="slides/good-advice.md"></section>
+    <section data-markdown="slides/the-bad-3.md"></section>
 
 
                     
@@ -158,7 +173,7 @@
                 
                     
                         
-    <section data-markdown="slides/good-advice-2.md"></section>
+    <section data-markdown="slides/the-what.md"></section>
 
 
                     
@@ -166,7 +181,23 @@
                 
                     
                         
-    <section data-markdown="slides/what-happens-next.md"></section>
+    <section data-markdown="slides/f-a-b.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/f-f-s.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/whats-next.md"></section>
 
 
                     
@@ -207,12 +238,15 @@
                     { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
                     { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+                    { src: 'plugin/slide-heading-classes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+                    { src: 'plugin/body-active-slide-class.js', async: true, condition: function() { return !!document.body.classList; } },
+
                     // { src: 'bower_components/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
                     //{ src: 'bower_components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 
-                    { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } },
-
-                    { src: 'js/colour-hashes.js', async: true, condition: function() { return true; } }
+                    { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
                 ]
             });
         </script>

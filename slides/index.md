@@ -1,4 +1,2 @@
 
-# Measuring CSS
-
-## Katie Fenn
+# Measuring CSS With Parker
