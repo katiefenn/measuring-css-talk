@@ -1,4 +1,7 @@
 ##  Thank You
 
+![Parker and Penelope](img/parker.jpg)
+
 - @katie_fenn
-- https://github.com/katiefenn/
+- [katiefenn.github.io/measuring-css-talk](http://katiefenn.github.io/measuring-css-talk)
+- [github.com/katiefenn/parker](http://www.github.com/katiefenn/parker) 

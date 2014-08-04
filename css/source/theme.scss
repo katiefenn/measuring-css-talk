@@ -14,42 +14,50 @@
 
 // Include theme-specific fonts ----------------
 @font-face {
-        font-family: 'Quicksand';
-        src: url('../fonts/Quicksand-Regular.otf');
-        font-weight: normal;
-        font-style: normal;
+    font-family: 'aaarghnormal';
+    src: url('../fonts/Aaargh-webfont.eot');
+    src: url('../fonts/Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Aaargh-webfont.woff') format('woff'),
+         url('../fonts/Aaargh-webfont.ttf') format('truetype'),
+         url('../fonts/Aaargh-webfont.svg#aaarghnormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
+
 @font-face {
-        font-family: 'Ubuntu Mono';
-        src: url('../fonts/UbuntuMono-R.ttf');
-        font-weight: normal;
-        font-style: normal;
+    font-family: 'colaborate-thinregular';
+    src: url('../fonts/ColabThi-webfont.eot');
+    src: url('../fonts/ColabThi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ColabThi-webfont.woff') format('woff'),
+         url('../fonts/ColabThi-webfont.ttf') format('truetype'),
+         url('../fonts/ColabThi-webfont.svg#colaborate-thinregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 // ---------------------------------------------
 
 // Override theme settings ---------------------
-$heading1TextShadow: 0px 5px 6px rgba(150, 150, 150, 1);
+$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
 // Other options include e.g.
-$mainFont: 'Quicksand', sans-serif;
-$mainColor: #555;
-$headingColor: #555;
-$linkColor: #8000FF;
-$linkColorHover: $linkColor;
-$headingFont: 'Quicksand', Impact, sans-serif;
+// $mainFont: 'Open Sans', sans-serif;
+// $linkColor: #ed1dff;
+// $linkColorHover: $linkColor;
+// $headingFont: 'Montserrat', Impact, sans-serif;
 // $headingTextShadow: none;
 // $headingLetterSpacing: -0.03em;
 // $headingTextTransform: none;
 // $selectionBackgroundColor: #e0ad52;
 // $mainFontSize: 30px;
-$backgroundColor: #FFF;
 // See ../../bower_components/reveal.js/css/theme/template/settings.scss for the full list.
 // ---------------------------------------------
 
 // Background generator ------------------------
 @mixin bodyBackground() {
-        background-color: #FFF;
+        @include radial-gradient( #22f, #55d );
 }
 // ---------------------------------------------
 
@@ -60,20 +68,21 @@ $backgroundColor: #FFF;
 // See ../../bower_components/reveal.js/css/theme/README.md
 // for further explanations on how reveal.js themes work.
 
-.reveal .controls * {
-	display: none;
-}
+.reveal {
+    a:not(.image) {
+        color: #fff;
+        text-decoration: underline;
+    }
 
-.reveal .colour-hashes {
-	list-style: none;
-	display: block;
-	overflow-y: scroll;
-	height: 500px;
-	font-family: 'Ubuntu Mono', monospace;
+    h1, h2, h3 {
+        font-family: aaarghnormal;
+    }
 
-	li {
-		display: inline;
-		font-size: 70%;
-		font-weight: bold;
-	}
+    p, ul {
+        font-family: colaborate-thinregular;
+    }
+
+    .controls, .progress  {
+        visibility: hidden;
+    }
 }

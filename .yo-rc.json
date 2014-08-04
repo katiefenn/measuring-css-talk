@@ -1,7 +1,10 @@
 {
   "generator-reveal": {
-    "presentationTitle": "Measuring CSS",
+    "presentationTitle": "Measuring CSS With Parker",
     "packageVersion": "0.0.0",
-    "useSass": true
+    "useSass": true,
+    "deployToGithubPages": true,
+    "githubUsername": "katiefenn",
+    "githubRepository": "example_repository"
   }
 }

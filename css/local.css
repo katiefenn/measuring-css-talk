@@ -1,0 +1,7 @@
+.reveal section.the-what img {
+    width: 200%;
+}
+
+.reveal section.the-what p {
+    font-size: 3em;
+}

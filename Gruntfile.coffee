@@ -1,4 +1,4 @@
-# Generated on 2014-02-17 using generator-reveal 0.3.4
+# Generated on 2014-07-30 using generator-reveal 0.3.7
 module.exports = (grunt) ->
 
     grunt.initConfig
@@ -13,7 +13,8 @@ module.exports = (grunt) ->
                     'slides/*.md'
                     'slides/*.html'
                     'js/*.js'
-                    'css/*.css'
+                    'css/*.css',
+                    'plugin/*.js'
                 ]
 
             index:
@@ -88,6 +89,20 @@ module.exports = (grunt) ->
                     filter: 'isFile'
                 }]
 
+        
+        buildcontrol:
+
+            options:
+                dir: 'dist'
+                commit: true
+                push: true
+                message: 'Built from %sourceCommit% on branch %sourceBranch%'
+            pages:
+                options:
+                    remote: 'git@github.com:katiefenn/example_repository.git'
+                    branch: 'gh-pages'
+        
+
 
     # Load all grunt tasks.
     require('load-grunt-tasks')(grunt)
@@ -129,6 +144,14 @@ module.exports = (grunt) ->
             'buildIndex'
             'copy'
         ]
+
+    
+    grunt.registerTask 'deploy',
+        'Deploy to Github Pages', [
+            'dist'
+            'buildcontrol'
+        ]
+    
 
     # Define default task.
     grunt.registerTask 'default', [
