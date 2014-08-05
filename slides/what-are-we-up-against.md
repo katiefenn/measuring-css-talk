@@ -1,6 +1,6 @@
 ## What are we up against?
 
 - Overuse of !important
-- HTTP performance
-- Specificty arms races
+- Excess HTTP requests
+- Escalating selector specificity
 - Inconsistent colour schemes

@@ -1,4 +1,4 @@
-## What Have I Done With Parker?
+## Analysing the web
 
 ![Crawling the Web](img/spectrum.gif)
 

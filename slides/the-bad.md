@@ -1,4 +1,4 @@
 ## The Bad
 
-- Mean instances of !important = 90
-- Maximum instances of !important = 1122
+- 88: Mean number of uses of !important
+- 76: Mean number unique colours
