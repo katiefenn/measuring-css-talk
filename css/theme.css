@@ -158,6 +158,9 @@ body {
 .reveal h1, .reveal h2, .reveal h3 {
   font-family: aaarghnormal; }
 .reveal p, .reveal ul {
-  font-family: colaborate-thinregular; }
+  font-family: colaborate-thinregular;
+  font-size: 1.5em; }
+.reveal li {
+  margin-bottom: 0.5em; }
 .reveal .controls, .reveal .progress {
   visibility: hidden; }

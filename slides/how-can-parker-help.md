@@ -1,6 +1,5 @@
-## How Can Parker Help?
+## How Will Parker Help?
 
-- Identify immediate problems
-- Highlight trends over time
-- Extensible
-- Automated
+- Provide feedback for code reviews
+- Warn developers when complexity escalates
+- Enable developers to write custom metrics

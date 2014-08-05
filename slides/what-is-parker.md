@@ -1,6 +1,6 @@
 ## What Is Parker?
 
-- Runs metrics on stylesheets
 - Command-line tool
+- Runs metrics on stylesheets
 - Written in Node.JS
 - Installed with npm

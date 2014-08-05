@@ -1,4 +1,5 @@
 ## The Good
 
-- Mean specificity < 100
-- 13 / 33 sites had 0 id identifiers
+- 43: Average specificity
+- 1/5: Sites with 0 id selectors
+- 3.4: Mean stylesheets requested on load
